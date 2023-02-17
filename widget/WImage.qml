@@ -5,6 +5,7 @@ Image {
     id: root
     state: "normal"
     asynchronous: true
+    mipmap: true
     property bool enableMouse: false
     property alias groupName: theme.groupName
     onGroupNameChanged: {

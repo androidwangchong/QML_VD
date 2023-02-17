@@ -19,5 +19,16 @@
         <file>widget/WTextView.qml</file>
         <file>themes/Dark/WTextView.ini</file>
         <file>themes/Light/WTextView.ini</file>
+        <file>image/main/main_bg.png</file>
+        <file>widget/WImageButton.qml</file>
+        <file>image/toolbar/window_close@2x.png</file>
+        <file>image/toolbar/window_close_white@2x.png</file>
+        <file>image/toolbar/window_max@2x.png</file>
+        <file>image/toolbar/window_min@2x.png</file>
+        <file>image/toolbar/Rocket@2x.png</file>
+        <file>image/main/Video Downloader.png</file>
+        <file>image/main/Brand@2x.png</file>
+        <file>form/PageBar.qml</file>
+        <file>form/PageBarForm.ui.qml</file>
     </qresource>
 </RCC>

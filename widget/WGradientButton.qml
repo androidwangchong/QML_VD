@@ -8,9 +8,10 @@ Item {
     property alias buttonRadius: bg.radius
     property alias radiusCorners: bg.radiusCorners
 
-    property string textGroupName: "blue_button_text"
-    property string bgGroupName: "blue_button_bg"
-    property string fillGroupName: "blue_button_bg"
+    property string textGroupName: ""
+    property string bgGroupName: ""
+    property string fillGroupName: ""
+    property string iconGroupName: ""
 
     property int gapWidth: 20
     property int minWidth: 0
@@ -19,7 +20,7 @@ Item {
     property int iconWidth: 0
     property int iconHeight: 0
     property int iconTextGap: 0
-    property string iconGroupName: ""
+
 
     signal clicked
     signal entered

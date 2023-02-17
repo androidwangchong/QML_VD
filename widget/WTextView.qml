@@ -49,6 +49,17 @@ Text {
 
         function init() {
             initialize()
+//            if (family === 0) {
+//                root.font.family = semibold.name
+//            } else if (family === 1) {
+//                root.font.family = fBoldName
+//            } else if (family === 2) {
+//                root.font.family = medium.name
+//            } else if (family === 3) {
+//                root.font.family = light.name
+//            } else if (family === 4) {
+//                root.font.family = regular.name
+//            }
         }
 
         Component.onCompleted: {

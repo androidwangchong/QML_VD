@@ -15,6 +15,10 @@ LinearGradient {
             id: gradientStart
             position: 0.0
         }
+//        GradientStop {
+//            id: gradientM
+//            position: 0.5
+//        }
         GradientStop {
             id: gradientStop
             position: 1.0
@@ -33,8 +37,8 @@ LinearGradient {
         property int gradientEndX: 0
         property int gradientStartY: 0
         property int gradientEndY: 0
-        property alias gradientStartColor: gradientStart.color
-        property alias gradientStopColor: gradientStop.color
+        property alias gradientStartColor: gradientStop.color
+        property alias gradientStopColor: gradientStart.color
 
         Component.onCompleted: {
             initialize()
