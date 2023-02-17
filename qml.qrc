@@ -1,0 +1,23 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>themes/Dark/main.ini</file>
+        <file>themes/Light/main.ini</file>
+        <file>form/ToolBar.qml</file>
+        <file>form/ToolBarForm.ui.qml</file>
+        <file>widget/WGradientButton.qml</file>
+        <file>widget/WLinearGradient.qml</file>
+        <file>themes/Dark/WLinearGradient.ini</file>
+        <file>themes/Light/WLinearGradient.ini</file>
+        <file>widget/WRoundRectangle.qml</file>
+        <file>widget/WRectangle.qml</file>
+        <file>themes/Dark/WRectangle.ini</file>
+        <file>themes/Light/WRectangle.ini</file>
+        <file>widget/WImage.qml</file>
+        <file>themes/Dark/WImage.ini</file>
+        <file>themes/Light/WImage.ini</file>
+        <file>widget/WTextView.qml</file>
+        <file>themes/Dark/WTextView.ini</file>
+        <file>themes/Light/WTextView.ini</file>
+    </qresource>
+</RCC>
