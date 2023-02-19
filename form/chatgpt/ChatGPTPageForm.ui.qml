@@ -3,6 +3,8 @@ import "../../widget"
 
 Item {
 
+    property alias tabPage: tabPage
+
     width: 952
     height: 707
 
@@ -114,7 +116,13 @@ Item {
                 buttonText: qsTr("Download")
             }
 
+            WTabButton {
+                id: tabPage
+                width: 320; height: 28
+                tabItem1Text: qsTr("Converting")
+                tabItem2Text: qsTr("Finished")
 
+            }
 
         }
 

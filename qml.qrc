@@ -43,5 +43,6 @@
         <file>image/light/button/add_files_hover.png</file>
         <file>image/light/button/add_files_normal.png</file>
         <file>image/light/button/add_files_press.png</file>
+        <file>widget/WTabButton.qml</file>
     </qresource>
 </RCC>
