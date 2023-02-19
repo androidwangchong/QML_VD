@@ -30,5 +30,18 @@
         <file>image/main/Brand@2x.png</file>
         <file>form/PageBar.qml</file>
         <file>form/PageBarForm.ui.qml</file>
+        <file>form/MainPage.qml</file>
+        <file>form/MainPageForm.ui.qml</file>
+        <file>form/chatgpt/ChatGPTPage.qml</file>
+        <file>form/chatgpt/ChatGPTPageForm.ui.qml</file>
+        <file>form/downloader/DownloaderPage.qml</file>
+        <file>form/downloader/DownloaderPageForm.ui.qml</file>
+        <file>form/video2mp3/Video2MP3Page.qml</file>
+        <file>form/video2mp3/Video2MP3PageForm.ui.qml</file>
+        <file>image/light/button/download@2x.png</file>
+        <file>image/light/button/add_files_disable.png</file>
+        <file>image/light/button/add_files_hover.png</file>
+        <file>image/light/button/add_files_normal.png</file>
+        <file>image/light/button/add_files_press.png</file>
     </qresource>
 </RCC>

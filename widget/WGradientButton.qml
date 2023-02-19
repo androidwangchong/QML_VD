@@ -7,19 +7,22 @@ Item {
     property alias buttonText: btnText.text
     property alias buttonRadius: bg.radius
     property alias radiusCorners: bg.radiusCorners
+    property alias buttonState: bg.state
+    property alias buttonTextWeight: btnText.font.weight
 
     property string textGroupName: ""
     property string bgGroupName: ""
-    property string fillGroupName: ""
+    property string fillGroupName: "transparent_button_bg"
     property string iconGroupName: ""
 
-    property int gapWidth: 20
-    property int minWidth: 0
+    property int gapWidth: 24
+    property int minWidth: 90
     property int vOffset: 0
 
     property int iconWidth: 0
     property int iconHeight: 0
     property int iconTextGap: 0
+
 
 
     signal clicked
@@ -28,7 +31,6 @@ Item {
 
     WRoundRectangle {
         id: bg
-        radius: 4
         enableMouse: true
         enabled: root.enabled
         anchors.fill: parent
@@ -45,11 +47,17 @@ Item {
                 source: parent
                 groupName: fillGroupName
             }
+            Component.onCompleted: {
+                bg.radius = bgRect.radius
+            }
         }
+
         onClicked: root.clicked()
         onEntered: root.entered()
         onExited: root.exited()
     }
+
+
 
     Row {
         id: itemList
@@ -76,6 +84,43 @@ Item {
                 verticalCenterOffset: vOffset
             }
             groupName: textGroupName
+            font {
+                weight: Font.Bold
+            }
         }
     }
+
+    states: [
+        State {
+            name: "GENERAL"
+            PropertyChanges {
+                target: root
+                enabled: true
+            }
+        },
+        State {
+            name: "hover"
+            PropertyChanges {
+                target: root
+                enabled: true
+            }
+        },
+        State {
+            name: "press"
+            PropertyChanges {
+                target: root
+                enabled: true
+            }
+        },
+        State {
+            name: "disable"
+            PropertyChanges {
+                target: root
+                enabled: false
+            }
+        }
+    ]
+
+
+
 }

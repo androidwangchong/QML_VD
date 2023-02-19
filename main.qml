@@ -65,6 +65,17 @@ QTQUICKCONTROLS.ApplicationWindow {
                 topMargin: 113
             }
         }
+
+        MainPage {
+            id: mainPage
+            anchors {
+                top: parent.top
+                topMargin: 43
+                right: parent.right
+                rightMargin: 7
+            }
+        }
+
     }
 
 

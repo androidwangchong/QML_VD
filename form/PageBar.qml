@@ -5,6 +5,9 @@ PageBarForm {
     property int listviewItemHeight: 56
     property int listviewHoverIndex: -1
     property int listviewPressIndex: -1
+    property int currentIndex: listview.currentIndex
+
+
     Component.onCompleted: {
         listview.delegate = delegate
         listview.model = listmodel
@@ -74,6 +77,7 @@ PageBarForm {
             MouseArea {
                 anchors.fill: parent
                 hoverEnabled: true
+                cursorShape: containsMouse ? Qt.PointingHandCursor : Qt.ArrowCursor
                 onEntered: listviewHoverIndex = index
                 onPressed: listviewPressIndex = index
                 onExited: {

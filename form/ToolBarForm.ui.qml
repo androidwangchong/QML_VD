@@ -67,16 +67,16 @@ Rectangle {
     }
     WGradientButton {
         id: activeButton
-        width: 126
         height: 32
         buttonText: qsTr("Upgrade to Pro")
         buttonRadius: 5
         iconWidth: 24
         iconHeight: 24
         iconTextGap: 5
+        gapWidth: 7
         textGroupName: "active_button_text"
         iconGroupName: "active_button_image"
-        bgGroupName: "transparent_bg"
+        bgGroupName: "activate_button_bg"
         fillGroupName: "activate_button_bg"
         anchors {
             right: buttonRow.left
