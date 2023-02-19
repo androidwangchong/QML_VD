@@ -118,7 +118,7 @@ Item {
 
             WTabButton {
                 id: tabPage
-                width: 320; height: 28
+                width: 186; height: 31
                 tabItem1Text: qsTr("Converting")
                 tabItem2Text: qsTr("Finished")
 
