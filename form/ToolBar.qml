@@ -4,6 +4,7 @@ ToolBarForm {
 
     signal miniWindowClicked
     signal maxWindowClicked
+    signal restoreWindowClicked
     signal colseWindowClicked
     signal activeButtonClicked
 
@@ -14,6 +15,9 @@ ToolBarForm {
     }
     maxButton.onClicked :{
         maxWindowClicked()
+    }
+    restoreButton.onClicked :{
+        restoreWindowClicked()
     }
     closeButton.onClicked :{
         colseWindowClicked()

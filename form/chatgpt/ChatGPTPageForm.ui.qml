@@ -5,8 +5,6 @@ Item {
 
     property alias tabPage: tabPage
 
-    width: 952
-    height: 707
 
     WRectangle {
         id: mainRect

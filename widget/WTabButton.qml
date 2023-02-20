@@ -9,7 +9,7 @@ WRectangle {
     property int itemSelectIndex: 0
     property alias tabItem1Text: tabItem1.text
     property alias tabItem2Text: tabItem2.text
-    property int gapWidth: 2
+    property int gapWidth: 5
 
     signal tabClicked(var index)
 

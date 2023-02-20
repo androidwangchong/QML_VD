@@ -8,6 +8,7 @@ Rectangle {
 
     property alias miniButton: miniButton
     property alias maxButton: maxButton
+    property alias restoreButton: restoreButton
     property alias closeButton: closeButton
     property alias activeButton: activeButton
     property alias toolBarMouseArea: toolBarMouseArea
@@ -52,7 +53,17 @@ Rectangle {
             iconHeight: 20
             bgGroupName: "max_button_bg"
             iconGroupName: "max_button"
-
+            visible: !_root_window_.isMaxVisibility()
+        }
+        WImageButton {
+            id: restoreButton
+            width: 32
+            height: 32
+            iconWidth: 20
+            iconHeight: 20
+            bgGroupName: "max_button_bg"
+            iconGroupName: "max_button"
+            visible: _root_window_.isMaxVisibility()
         }
         WImageButton {
             id: closeButton

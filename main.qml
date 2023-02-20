@@ -15,18 +15,27 @@ QTQUICKCONTROLS.ApplicationWindow {
 
     color: "#00000000"
     visible: true
-    width: 1180
-    height: 767
-    title: qsTr("Hello World")
-    flags: isWin32Platform ? (Qt.FramelessWindowHint | Qt.Window): Qt.Window
+    minimumWidth: _windowWidth + _shadowSize
+    minimumHeight: _windowHeight + _shadowSize
+    title: isWin32Platform ? qsTr("Speed Video Downloader") : ""
+    flags: isWin32Platform ? Qt.Window | Qt.FramelessWindowHint : Qt.Window
 
-
+    property int _shadowSize: 0
+    property int _windowWidth: 1180
+    property int _windowHeight: 767
+    property int _toolBarHeight: 48
 
     property string defaultAppStartupTheme: "Light"
     property bool isWin32Platform: Qt.platform.os === "windows" || Qt.platform.os === "winrt"
     property int _beforeMinVisibility: Window.Windowed
     property bool isForceExit: false
 
+
+    onActiveChanged: {
+        if (isWin32Platform && _root_window_.active) {
+            _root_window_.visibility = _beforeMinVisibility
+        }
+    }
 
     T2DWorld {
         id: appTheme
@@ -37,8 +46,8 @@ QTQUICKCONTROLS.ApplicationWindow {
 
     Rectangle {
         id: rootRect
-        width: 1180
-        height: 767
+        width: isMaxVisibility() ? _root_window_.width : _root_window_.width - _shadowSize
+        height: isMaxVisibility() ? _root_window_.height : _root_window_.height - _shadowSize
         color: "#00000000"
         WImage {
             id: mainBgImage
@@ -49,6 +58,8 @@ QTQUICKCONTROLS.ApplicationWindow {
         }
         ToolBar {
             id: toolBar
+            width: parent.width
+            height: _toolBarHeight
         }
         WImage {
             id: appNameImage
@@ -86,6 +97,9 @@ QTQUICKCONTROLS.ApplicationWindow {
         }
         onMaxWindowClicked: {
             maximizeWindows()
+        }
+        onRestoreWindowClicked: {
+            restoreWindows()
         }
         onColseWindowClicked: {
             exitProgram()
