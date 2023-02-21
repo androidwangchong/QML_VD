@@ -1,4 +1,5 @@
 import QtQuick 2.4
+import QtQuick.Controls 2.14
 import "../../widget"
 
 Item {
@@ -6,13 +7,11 @@ Item {
     property alias tabPage: tabPage
 
 
-    width: 952
-    height: 707
 
     WRectangle {
         id: mainRect
-        width: 952
-        height: 707
+        anchors.fill: parent
+        radius: 8
         groupName: "main_page_rect_bg"
 
 
@@ -62,5 +61,51 @@ Item {
                 topMargin: 68
             }
         }
+
+
+
+
+
+
+        SwipeView {
+            width: parent.width
+            anchors {
+                top: line.bottom
+                bottom: parent.bottom
+            }
+            interactive: false
+            orientation: Qt.Horizontal
+            currentIndex: tabPage.itemSelectIndex
+            clip: true
+            Item {
+                DownloadingPage {
+                    id: downloadingPage
+                    anchors.fill: parent
+                }
+            }
+            Item {
+                DownloadFinishPage {
+                    id: finishPage
+                    anchors.fill: parent
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }

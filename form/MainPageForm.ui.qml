@@ -9,23 +9,22 @@ Item {
 
     property alias swipeView: swipeView
 
-    property var rectWidth: 952
-    property var rectHeight: 707
+
 
     property var shadowSize: 10
 
-    width: rectWidth + shadowSize
-    height: rectWidth + shadowSize
+    width: parent.width - shadowSize
+    height: parent.height - shadowSize
 
 
     SwipeView {
         id: swipeView
-        width: rectWidth
-        height: rectWidth
+
         interactive: false
         orientation: Qt.Vertical
         clip: true
         anchors {
+            fill: parent
             centerIn: parent
         }
 

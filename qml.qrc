@@ -44,5 +44,12 @@
         <file>image/light/button/add_files_normal.png</file>
         <file>image/light/button/add_files_press.png</file>
         <file>widget/WTabButton.qml</file>
+        <file>form/downloader/DownloadingPage.qml</file>
+        <file>form/downloader/DownloadingPageForm.ui.qml</file>
+        <file>image/light/downloadpage/download_url_bg_hover.png</file>
+        <file>image/light/downloadpage/download_url_bg_normal.png</file>
+        <file>form/downloader/DownloadFinishPage.qml</file>
+        <file>form/downloader/DownloadFinishPageForm.ui.qml</file>
+        <file>image/light/downloadpage/download_url_bg_icon.png</file>
     </qresource>
 </RCC>

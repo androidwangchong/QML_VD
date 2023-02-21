@@ -79,11 +79,12 @@ QTQUICKCONTROLS.ApplicationWindow {
 
         MainPage {
             id: mainPage
+            width:  _root_window_.width - pageBar.width - 3 * 12
+            height: _root_window_.height - toolBar.height - 12
             anchors {
-                top: parent.top
-                topMargin: 43
-                right: parent.right
-                rightMargin: 7
+                top: toolBar.bottom
+                left: pageBar.right
+                leftMargin: 12
             }
         }
 
